@@ -1,0 +1,51 @@
+= progress
+:toc:
+
+image::https://cloud.githubusercontent.com/assets/1744446/26361762/f32e54f4-4016-11e7-8c5e-5966a4c63159.gif[progress,190]
+
+== Install
+
+image::https://api.bintray.com/packages/importre/maven/progress/images/download.svg[link="https://bintray.com/importre/maven/progress/_latestVersion"]
+
+```gradle
+dependencies {
+    compile "com.importre:progress:$progress_version"
+}
+```
+
+== Examples
+
+```kotlin
+progress {
+    // long-term job
+    Thread.sleep(1500)
+}
+
+progress(message = "",
+    frames = Frames.dots8.map(String::blue),
+    done = Frames.done.green()) {
+
+    // long-term job
+    (0..100).forEach {
+        message = "$it%".bold()
+        Thread.sleep(50)
+    }
+}
+```
+
+=== Execution
+
+```sh
+$ ./gradlew -q example:run
+```
+
+
+== Related
+
+- https://github.com/importre/crayon[crayon - :ribbon: Styling terminal text written in Kotlin]
+- https://github.com/importre/hello-kotlin[hello-kotlin - kotlin cli example]
+
+
+== License
+
+MIT © Jaewe Heo

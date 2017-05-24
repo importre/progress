@@ -8,6 +8,10 @@ image::https://cloud.githubusercontent.com/assets/1744446/26361762/f32e54f4-4016
 image::https://api.bintray.com/packages/importre/maven/progress/images/download.svg[link="https://bintray.com/importre/maven/progress/_latestVersion"]
 
 ```gradle
+repositories {
+    jcenter()
+}
+
 dependencies {
     compile "com.importre:progress:$progress_version"
 }

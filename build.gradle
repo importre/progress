@@ -48,7 +48,7 @@ subprojects { sub ->
         ext {
             kotlin_version = rootProject.ext.kotlin_version
             junit_version = rootProject.ext.junit_version
-            crayon_version = '0.0.2'
+            crayon_version = '0.1.0'
         }
 
         repositories {
